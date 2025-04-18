@@ -1,0 +1,28 @@
+services:
+  lab4-mysql:
+    image: mysql:latest
+    container_name: lab4-mysql
+    environment:
+      MYSQL_DATABASE: aspect_lab4
+      MYSQL_ALLOW_EMPTY_PASSWORD: yes
+      MYSQL_USER: aspect_lab4_user
+      MYSQL_PASSWORD: aspect_lab4_password
+    ports:
+      - "3307:3306"
+    volumes:
+      - lab4_mysql_data:/var/lib/mysql
+    restart: unless-stopped
+
+  lab4-redis:
+    image: redis:latest
+    container_name: lab4-redis
+    ports:
+      - "6380:6379"
+    volumes:
+      - lab4_redis_data:/data
+    restart: unless-stopped
+    command: redis-server --save 60 1 --loglevel warning
+
+volumes:
+  lab4_mysql_data:
+  lab4_redis_data:

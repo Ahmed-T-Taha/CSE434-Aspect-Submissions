@@ -1,0 +1,21 @@
+services:
+  mysql:
+    image: mysql:latest
+    container_name: local_mysql
+    restart: unless-stopped
+    ports:
+      - "3307:3306"
+
+    environment:
+      MYSQL_DATABASE: aspect_lab_3
+      MYSQL_ALLOW_EMPTY_PASSWORD: yes
+      MYSQL_USER: mysql
+      MYSQL_PASSWORD: mysql
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
+
+
+
