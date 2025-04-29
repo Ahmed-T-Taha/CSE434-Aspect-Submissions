@@ -1,4 +1,4 @@
-package com.example.lab1;
+package com.example.Lab1;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 public class LoggingAspect {
     private final Logger logger = Logger.getLogger(LoggingAspect.class.getName());
 
-    @Before("execution(* com.example.lab1.controllers.ProductController.*(..))")
+    @Before("execution(* com.example.Lab1.controllers.ProductController.*(..))")
     public void logMethodCall(JoinPoint jp) {
         String methodName = jp.getSignature().getName();
         logger.info("Starting execution of: " + methodName + " in ProductController");

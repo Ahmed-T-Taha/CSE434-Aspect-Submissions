@@ -1,7 +1,7 @@
-package com.example.lab1.controllers;
+package com.example.Lab1.controllers;
 
-import com.example.lab1.models.Product;
-import com.example.lab1.repository.ProductRepository;
+import com.example.Lab1.models.Product;
+import com.example.Lab1.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
