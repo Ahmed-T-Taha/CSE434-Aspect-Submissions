@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -19,6 +20,15 @@
         </processorPath>
         <module name="Lab4" />
       </profile>
+      <profile name="Annotation profile for Lab5" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
+        </processorPath>
+        <module name="Lab5" />
+      </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
@@ -27,6 +37,7 @@
       <module name="Lab2" options="-parameters" />
       <module name="Lab3" options="-parameters" />
       <module name="Lab4" options="-parameters" />
+      <module name="Lab5" options="-parameters" />
     </option>
   </component>
 </project>

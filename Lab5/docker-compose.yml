@@ -1,0 +1,17 @@
+services:
+  lab4-mysql:
+    image: mysql:latest
+    container_name: lab5-user-mysql
+    environment:
+      MYSQL_DATABASE: aspect_lab5
+      MYSQL_ALLOW_EMPTY_PASSWORD: yes
+      MYSQL_USER: aspect_lab5_user
+      MYSQL_PASSWORD: aspect_lab5_password
+    ports:
+      - "3307:3306"
+    volumes:
+      - aspect_lab5_data:/var/lib/mysql
+    restart: unless-stopped
+
+volumes:
+  aspect_lab5_data:
