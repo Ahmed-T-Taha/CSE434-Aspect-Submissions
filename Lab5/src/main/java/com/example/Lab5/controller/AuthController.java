@@ -21,7 +21,6 @@ public class AuthController {
     @Autowired
     private AuthService authService;
 
-
     @PostMapping("/login")
     public ResponseEntity<Object> authenticate(@RequestBody LoginRequest loginRequest, HttpServletResponse response) {
         try {
@@ -43,12 +42,6 @@ public class AuthController {
         }
     }
 
-/*
-    @PostMapping("/login")
-    public ResponseEntity<JwtResponse> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
-        return authService.loginUser(loginRequest);
-    }
-*/
     @PostMapping("/register")
     public ResponseEntity<?> registerUser(@Valid @RequestBody RegisterRequest registerRequest) {
         return authService.registerUser(registerRequest);
